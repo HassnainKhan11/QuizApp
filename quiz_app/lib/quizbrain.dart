@@ -3,46 +3,51 @@ import 'package:quiz_app/questions.dart';
 class Quizbrain {
   int _questionNumber = 0;
 
-  List<Question> _questionBank = [
+  final List<Question> _questionBank = [
     Question(
       'Question No 01',
-      'Some cats are actually allergic to humans',
-      true,
+      'Latitude is measured east and west of the prime meridian',
+      false,
     ),
     Question('Question No 02',
-        'You can lead a cow down stairs but not up stairs.', false),
+        'A cape is a point of land extending into a body of water.', true),
     Question('Question No 03',
-        'Approximately one quarter of human bones are in the feet.', true),
-    Question('Question No 04', 'A slug\'s blood is green.', true),
-    Question('Question No 05',
-        'Buzz Aldrin\'s mother\'s maiden name was \"Moon\".', true),
-    Question('Question No 06', 'It is illegal to pee in the Ocean in Portugal.',
-        true),
+        '. The Antarctic Circle is located south of the equator.', true),
+    Question('Question No 04',
+        'A star on a map usually denotes a national capital', false),
     Question(
-        'Question No 07',
-        'No piece of square dry paper can be folded in half more than 7 times.',
+        'Question No 05',
+        'Lines of longitude are measured north and south of the equator.',
         false),
     Question(
-        'Question No 08',
-        'In London, UK, if you happen to die in the House of Parliament, you are technically entitled to a state funeral, because the building is considered too sacred a place.',
-        true),
+        'Question No 06',
+        'When you cross the prime meridian the date becomes either one day earlier or one day later.',
+        false),
+    Question('Question No 07',
+        'Earth\'s oceans are the Pacific, Atlantic, Indian, and Arctic.', true),
+    Question('Question No 08',
+        'There are 50 states in the contiguous United States.', false),
     Question(
         'Question No 09',
-        'The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.',
+        ' An area of land extending into a body of water and almost surrounded by water is a peninsula.',
+        true),
+    Question('Question No 10',
+        'The Tropic of Cancer is located in the northern hemisphere', true),
+    Question(
+        'Question No 11',
+        'Africa, Asia, Australia, Europe, NorthAmerica, and South America form Earth\'s continental land masses.',
         false),
-    Question(
-        'Question No 10',
-        'The total surface area of two human lungs is approximately 70 square metres.',
-        true),
-    Question(
-        'Question No 11', 'Google was originally called \"Backrub\".', true),
-    Question(
-        'Question No 12',
-        'Chocolate affects a dog\'s heart and nervous system; a few ounces are enough to kill a small dog.',
-        true),
+    Question('Question No 12',
+        'A body of land completely surrounded by water is an island.', true),
     Question(
         'Question No 13',
-        'In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat.',
+        'The part of the map that contains information about what the symbols mean is the key.',
+        true),
+    Question(
+        'Question No 14',
+        'Longitude lines, or meridians, measure distances north and south',
+        false),
+    Question('Question No 15', 'The North Pole is not located on a continent.',
         true),
   ];
 

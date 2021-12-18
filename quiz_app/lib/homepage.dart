@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_new
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quiz_app/quizbrain.dart';
@@ -14,8 +16,10 @@ class _HomePageState extends State<HomePage> {
   Quizbrain quizbrain = Quizbrain();
   int rightAnswer = 0;
   int wrongAnswer = 0;
+  // ignore: non_constant_identifier_names
   int total_score = 13;
 
+  // ignore: non_constant_identifier_names
   List<Icon> ScoreKeeper = [];
 
   void isCorrectAnswer(bool userPickedAnswer) {
@@ -24,11 +28,6 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       if (quizbrain.isFinished() == true) {
         if (rightAnswer > wrongAnswer) {
-          // Alert(
-          //   context: context,
-          //   title: 'Congratulations! You WON 😍',
-          //   desc: 'You got $rightAnswer out of $total_score',
-          // ).show();
           Alert(
             context: context,
             type: AlertType.success,
@@ -36,7 +35,7 @@ class _HomePageState extends State<HomePage> {
             desc: "You got $rightAnswer out of $total_score",
             buttons: [
               DialogButton(
-                child: Text(
+                child: const Text(
                   "Continue",
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
@@ -58,7 +57,7 @@ class _HomePageState extends State<HomePage> {
             desc: "You got $wrongAnswer out of $total_score",
             buttons: [
               DialogButton(
-                child: Text(
+                child: const Text(
                   "Continue",
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
@@ -95,7 +94,7 @@ class _HomePageState extends State<HomePage> {
               child: Center(
                 child: Text(quizbrain.getQuestionNumber(),
                     style: GoogleFonts.lobster(
-                        textStyle: TextStyle(
+                        textStyle: const TextStyle(
                       color: Color(0xff002fd3),
                       fontSize: 32,
                       fontWeight: FontWeight.w400,
@@ -104,7 +103,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           Expanded(
@@ -115,7 +114,7 @@ class _HomePageState extends State<HomePage> {
                   quizbrain.getQuestionText(),
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
+                      textStyle: const TextStyle(
                     color: Color(0xff454444),
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
@@ -136,7 +135,7 @@ class _HomePageState extends State<HomePage> {
                     decoration: new BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.green[800],
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                             color: Color(0x3334b439),
                             offset: Offset(0, 4),
@@ -144,7 +143,7 @@ class _HomePageState extends State<HomePage> {
                             spreadRadius: 0)
                       ],
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         'True',
                         style: TextStyle(
@@ -168,7 +167,7 @@ class _HomePageState extends State<HomePage> {
                     height: 30,
                     decoration: new BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                         colors: [Color(0xffe44339)],
                         stops: [0.858818531036377],
                         begin: Alignment(-0.98, -0.19),
@@ -176,7 +175,7 @@ class _HomePageState extends State<HomePage> {
                         // angle: 101,
                         // scale: undefined,
                       ),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                             color: Color(0x3334b439),
                             offset: Offset(0, 4),
@@ -184,7 +183,7 @@ class _HomePageState extends State<HomePage> {
                             spreadRadius: 0)
                       ],
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         'False',
                         style: TextStyle(
