@@ -14,6 +14,7 @@ class _HomePageState extends State<HomePage> {
   Quizbrain quizbrain = Quizbrain();
   int rightAnswer = 0;
   int wrongAnswer = 0;
+  int total_score = 13;
 
   List<Icon> ScoreKeeper = [];
 
@@ -23,16 +24,48 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       if (quizbrain.isFinished() == true) {
         if (rightAnswer > wrongAnswer) {
+          // Alert(
+          //   context: context,
+          //   title: 'Congratulations! You WON 😍',
+          //   desc: 'You got $rightAnswer out of $total_score',
+          // ).show();
           Alert(
             context: context,
-            title: 'Quiz Finished!',
-            desc: 'You\'ve WON this quiz.\n😍🙌',
+            type: AlertType.success,
+            title: "CONGRATULATIONS! You WON 😍",
+            desc: "You got $rightAnswer out of $total_score",
+            buttons: [
+              DialogButton(
+                child: Text(
+                  "Continue",
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
+                onPressed: () => Navigator.pop(context),
+                width: 120,
+              )
+            ],
           ).show();
         } else {
+          // Alert(
+          //   context: context,
+          //   title: 'You LOSS 😣😥',
+          //   desc: 'You got $wrongAnswer out of $total_score',
+          // ).show();
           Alert(
             context: context,
-            title: 'Quiz Finished!',
-            desc: 'You\'ve LOSS this quiz.\n😣😥',
+            type: AlertType.error,
+            title: "You LOSS 😥",
+            desc: "You got $wrongAnswer out of $total_score",
+            buttons: [
+              DialogButton(
+                child: Text(
+                  "Continue",
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
+                onPressed: () => Navigator.pop(context),
+                width: 120,
+              )
+            ],
           ).show();
         }
         quizbrain.reset();

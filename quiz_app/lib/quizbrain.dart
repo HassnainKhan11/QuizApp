@@ -65,7 +65,7 @@ class Quizbrain {
   }
 
   void reset() {
-    _questionNumber = 0;
+    _questionNumber = -1;
   }
 
   bool isFinished() {
